@@ -9,6 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TaskManager">
+        <activity
+            android:name=".AllTasks"
+            android:label="AllTasks"
+            android:theme="@style/Theme.TaskManager.NoActionBar" />
+        <activity
+            android:name=".AddTask"
+            android:label="@string/title_activity_add_task"
+            android:theme="@style/Theme.TaskManager.NoActionBar" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
