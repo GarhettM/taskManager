@@ -9,6 +9,6 @@
 
 ### Screen Shots
 
-![mytasks](screenshots/addTaskscreen.PNG)
+![mytasks](screenshots/mytaskScreen.PNG)
 ![addtasks](screenshots/addTaskscreen.PNG)
 ![alltasks](screenshots/alltasksScreen.PNG)
