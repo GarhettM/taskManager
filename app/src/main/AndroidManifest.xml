@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TaskManager">
+        <activity android:name=".Settings"></activity>
+        <activity android:name=".TaskDetailPage" />
         <activity
             android:name=".AllTasks"
             android:label="AllTasks"
