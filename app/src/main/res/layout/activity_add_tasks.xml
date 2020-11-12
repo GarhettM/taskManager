@@ -6,6 +6,16 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/textTitleView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:fontFamily="casual"
+        android:text="Task Progress"
+        app:layout_constraintTop_toBottomOf="@+id/taskDesc"
+        tools:layout_editor_absoluteX="38dp" />
+
+    <TextView
         android:id="@+id/addTasksView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,14 +33,13 @@
         android:id="@+id/taskTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="My Task"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.184"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addTasksView" />
+        app:layout_constraintTop_toBottomOf="@+id/textTitleView" />
 
     <EditText
         android:id="@+id/taskDesc"
@@ -59,12 +68,11 @@
         android:id="@+id/textTitleView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
         android:fontFamily="casual"
         android:text="Task Title"
-        app:layout_constraintBottom_toTopOf="@+id/taskTitle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.104"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/addTasksView"
+        tools:layout_editor_absoluteX="37dp" />
 
     <TextView
         android:id="@+id/taskDescriptionView"
@@ -76,4 +84,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.121"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/taskProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Progress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTitleView2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

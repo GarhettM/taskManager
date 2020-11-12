@@ -10,13 +10,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.amplifyframework.datastore.generated.model.Todo;
+
 import java.util.ArrayList;
 
 public class TaskViewAdapter extends RecyclerView.Adapter<TaskViewAdapter.TaskViewHolder> {
-    ArrayList<Task> tasks;
-    public TaskViewAdapter(ArrayList<Task> tasks) {
+    ArrayList<Todo> tasks;
+
+    public TaskViewAdapter(ArrayList<Todo> tasks) {
+
         this.tasks = tasks;
     }
+    
     @NonNull
     @Override
     public TaskViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -33,7 +38,7 @@ public class TaskViewAdapter extends RecyclerView.Adapter<TaskViewAdapter.TaskVi
         holder.task = tasks.get(position);
         // Why is holder.fragment not working below
         ((TextView) holder.fragment.findViewById(R.id.taskName))
-        .setText(holder.task.taskName + " : " + holder.task.taskDesc + " : " + holder.task.taskProgress);
+        .setText(holder.task.name + " : " + holder.task.description + " : " + holder.task.progress);
 
     }
 
@@ -43,7 +48,7 @@ public class TaskViewAdapter extends RecyclerView.Adapter<TaskViewAdapter.TaskVi
     }
 
     public static class TaskViewHolder extends RecyclerView.ViewHolder {
-        Task task;
+        Todo task;
         View fragment;
 
         public TaskViewHolder(@NonNull View itemView) {
